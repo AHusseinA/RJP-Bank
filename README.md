@@ -62,3 +62,6 @@ There are many ways to connect microservices together(REST API, Message Queue,..
 
 <b> 5- Running the application: </b>
 <p> To run the application, you should make the three projects - AccountMicroservice, TransactionMicroservice, and BankApp - as startup. This will start the microservices and the presentation layer, allowing you to use the application. </p>
+
+<b>6- Database: </b>
+<p> find attached database script, file "RJP DB Script.sql" </p>
