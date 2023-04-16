@@ -17,11 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTO", "DTO\DTO.csproj", "{6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.TransactionMicroservice", "2.TransactionMicroservice", "{D7E825A9-AA67-4C6F-927E-AE2E229CF56C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transaction.Data", "Transaction.Data\Transaction.Data.csproj", "{4B7B928C-9C9B-4C89-AC1B-CC0D77FE5B7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transaction.Data", "Transaction.Data\Transaction.Data.csproj", "{4B7B928C-9C9B-4C89-AC1B-CC0D77FE5B7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transaction.Service", "Transaction.Service\Transaction.Service.csproj", "{6FCF3260-3981-4CD3-9269-A861A8B076FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transaction.Service", "Transaction.Service\Transaction.Service.csproj", "{6FCF3260-3981-4CD3-9269-A861A8B076FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionMicroservice", "TransactionMicroservice\TransactionMicroservice.csproj", "{9BA61BCE-3CC1-4202-B5DC-AC8B119D120F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransactionMicroservice", "TransactionMicroservice\TransactionMicroservice.csproj", "{9BA61BCE-3CC1-4202-B5DC-AC8B119D120F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
