@@ -9,9 +9,34 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{18
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{BD618D33-952D-4313-B382-C168F77805FD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Core", "0.Core", "{CEB56BAA-5865-4AA7-A879-660793966FC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{A3B57014-B761-47AA-9882-207ACF6757D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{6B6BF60F-6F04-47FA-BBF7-AC290190AB21}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3B57014-B761-47AA-9882-207ACF6757D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3B57014-B761-47AA-9882-207ACF6757D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3B57014-B761-47AA-9882-207ACF6757D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3B57014-B761-47AA-9882-207ACF6757D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B6BF60F-6F04-47FA-BBF7-AC290190AB21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B6BF60F-6F04-47FA-BBF7-AC290190AB21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B6BF60F-6F04-47FA-BBF7-AC290190AB21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B6BF60F-6F04-47FA-BBF7-AC290190AB21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CEB56BAA-5865-4AA7-A879-660793966FC1} = {A22DF797-3D11-4DFE-9DC9-FFB88E43F6DC}
+		{A3B57014-B761-47AA-9882-207ACF6757D2} = {CEB56BAA-5865-4AA7-A879-660793966FC1}
+		{6B6BF60F-6F04-47FA-BBF7-AC290190AB21} = {CEB56BAA-5865-4AA7-A879-660793966FC1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7984C46E-4835-4F15-89A4-1CE0A79800F1}
