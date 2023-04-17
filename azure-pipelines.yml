@@ -38,6 +38,10 @@ steps:
     versionSelector: 'SpecificVersion'
     testPlatformVersion: '17.2.0'
 
+- task: UseDotNet@2
+  inputs:
+    version: '6.x'
+
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
