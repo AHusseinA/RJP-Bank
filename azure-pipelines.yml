@@ -21,6 +21,9 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
+- task: UseDotNet@2
+  inputs:
+    version: '6.x'
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
@@ -33,21 +36,11 @@ steps:
     targetType: 'inline'
     script: 'dotnet --list-runtimes'
 
-- task: VisualStudioTestPlatformInstaller@1
-  inputs:
-    versionSelector: 'SpecificVersion'
-    testPlatformVersion: '17.2.0'
-
-- task: UseDotNet@2
-  inputs:
-    version: '6.x'
-
 - task: VSTest@2
   inputs:
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
     testSelector: 'testAssemblies'
-    testAssemblyVer2: '**\$(BuildConfiguration)\net6.0\*Test*.dll'
     searchFolder: '$(System.DefaultWorkingDirectory)'
     runSettingsFile: '$(System.DefaultWorkingDirectory)/test.runsettings'
     codeCoverageEnabled: true
