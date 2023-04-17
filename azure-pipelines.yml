@@ -43,12 +43,19 @@ steps:
   inputs:
     versionSelector: 'SpecificVersion'
     testPlatformVersion: '17.2.0'
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      ls $(System.DefaultWorkingDirectory)
+
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     testAssemblyVer2: |
-      **\$(BuildConfiguration)\*Test.dll
-      !**\obj\**
+         **\$(BuildConfiguration)\*Test*.dll
+         !**\obj\**
 
 
