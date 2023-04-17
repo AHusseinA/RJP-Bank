@@ -28,11 +28,19 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: 'dotnet --list-runtimes'
+
 - task: VSTest@2
   inputs:
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
     testSelector: 'testAssemblies'
+    testAssemblyVer2: '**\$(BuildConfiguration)\*test.dll'
     searchFolder: '$(System.DefaultWorkingDirectory)'
+    runSettingsFile: '$(System.DefaultWorkingDirectory)/test.runsettings'
     codeCoverageEnabled: true
+
 
