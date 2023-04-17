@@ -37,7 +37,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      Get-ChildItem '$(System.DefaultWorkingDirectory)\**\*test.dll' -Recurse -Include "*test.dll" | ForEach-Object {Write-Host $_.FullName}
+      Get-ChildItem '$(System.DefaultWorkingDirectory)\**\*Test.dll' -Recurse -Include "*Test.dll" | ForEach-Object {Write-Host $_.FullName}
 
 - task: VisualStudioTestPlatformInstaller@1
   inputs:
@@ -47,5 +47,8 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    testAssemblyVer2: |
+      **\$(BuildConfiguration)\*Test.dll
+      !**\obj\**
 
 
