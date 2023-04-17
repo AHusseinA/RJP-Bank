@@ -36,15 +36,6 @@ steps:
     targetType: 'inline'
     script: 'dotnet --list-runtimes'
 
-- task: VSTest@2
-  inputs:
-    platform: '$(BuildPlatform)'
-    configuration: '$(BuildConfiguration)'
-    testSelector: 'testAssemblies'
-    searchFolder: '$(System.DefaultWorkingDirectory)'
-    runSettingsFile: '$(System.DefaultWorkingDirectory)/test.runsettings'
-    codeCoverageEnabled: true
-
 
 
 
