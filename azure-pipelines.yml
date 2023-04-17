@@ -39,16 +39,15 @@ steps:
     script: |
       Get-ChildItem '$(System.DefaultWorkingDirectory)\**\*test.dll' -Recurse -Include "*test.dll" | ForEach-Object {Write-Host $_.FullName}
 
+- task: VisualStudioTestPlatformInstaller@1
+  inputs:
+    versionSelector: 'SpecificVersion'
+    testPlatformVersion: '17.2.0'
 - task: VSTest@2
   inputs:
-    platform: '$(BuildPlatform)'
-    configuration: '$(BuildConfiguration)'
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\*test.dll
-      !**\obj\**
-    searchFolder: '$(System.DefaultWorkingDirectory)'
-    runSettingsFile: '$(System.DefaultWorkingDirectory)/test.runsettings'
-    codeCoverageEnabled: true
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+    codeCoverageEnabled: True
+    vsTestVersion: 'toolsInstaller'
 
 
