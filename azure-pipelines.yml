@@ -33,28 +33,14 @@ steps:
     targetType: 'inline'
     script: 'dotnet --list-runtimes'
 
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      Get-ChildItem '$(System.DefaultWorkingDirectory)\**\*Test.dll' -Recurse -Include "*Test.dll" | ForEach-Object {Write-Host $_.FullName}
-
 - task: VisualStudioTestPlatformInstaller@1
   inputs:
     versionSelector: 'SpecificVersion'
     testPlatformVersion: '17.2.0'
 
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      ls $(System.DefaultWorkingDirectory)
-
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    testAssemblyVer2: |
-         **\$(BuildConfiguration)\*Test*.dll
 
 
