@@ -39,7 +39,7 @@ steps:
     configuration: '$(BuildConfiguration)'
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-       **\$(BuildConfiguration)\*test.dll
+       **\$(BuildConfiguration)\tests\*test.dll
        !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
     runSettingsFile: '$(System.DefaultWorkingDirectory)/test.runsettings'
