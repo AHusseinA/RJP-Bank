@@ -47,9 +47,7 @@ steps:
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
     testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\$(BuildConfiguration)\*Test*.dll
-      !**\obj\**
+    testAssemblyVer2: '**\$(BuildConfiguration)\net6.0\*Test*.dll'
     searchFolder: '$(System.DefaultWorkingDirectory)'
     runSettingsFile: '$(System.DefaultWorkingDirectory)/test.runsettings'
     codeCoverageEnabled: true
