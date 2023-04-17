@@ -47,7 +47,5 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    codeCoverageEnabled: True
-    vsTestVersion: 'toolsInstaller'
 
 
