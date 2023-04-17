@@ -33,14 +33,17 @@ steps:
     targetType: 'inline'
     script: 'dotnet --list-runtimes'
 
+- script: |
+    Get-ChildItem -Path '$(System.DefaultWorkingDirectory)' -Recurse -Include '*test.dll' | foreach-object {Write-Host $_.FullName}
+  displayName: 'Print test DLLs'
 - task: VSTest@2
   inputs:
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-       **\$(BuildConfiguration)\tests\*test.dll
-       !**\obj\**
+      **\*test.dll
+      !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
     runSettingsFile: '$(System.DefaultWorkingDirectory)/test.runsettings'
     codeCoverageEnabled: true
