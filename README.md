@@ -9,7 +9,7 @@ RJP Bank Application
 
   <p>The retrieve user information endpoint will output the user's name, surname, account balance, and transaction history for all accounts associated with the user.</p>
 
-  <p>To achieve these requirements, we have developed a microservices-based solution using C# and .NET Core. The solution consists of two microservices - the AccountMicroservice and the TransactionMicroservice - which are fully independent and communicate through the RabbitMQ messaging system. The presentation layer of the solution uses an AngularJS application to interact with the microservices and provide a user-friendly interface for creating accounts and viewing user information.
+  <p>To achieve these requirements, we have developed a microservices-based solution using C# and .NET Core (we used .NET 6.0). The solution consists of two microservices - the AccountMicroservice and the TransactionMicroservice - which are fully independent and communicate through the RabbitMQ messaging system. The presentation layer of the solution uses an AngularJS application to interact with the microservices and provide a user-friendly interface for creating accounts and viewing user information.
 
 In the following sections, we will provide detailed instructions on how to install and use the solution, including how to update configuration settings and run the various components of the solution. </p>
 
