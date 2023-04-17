@@ -56,6 +56,5 @@ steps:
     configuration: '$(buildConfiguration)'
     testAssemblyVer2: |
          **\$(BuildConfiguration)\*Test*.dll
-         !**\obj\**
 
 
